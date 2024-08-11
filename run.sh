@@ -13,7 +13,7 @@ do
     python3 converter.py $i > py_dump.log
     
     # Run the Ripes command with the specified options
-    ./Ripes-v2.2.6-linux-x86_64.AppImage --mode cli --src output.asm -t asm --proc "RV32_SS" --isaexts M,C --output log.json --json --runinfo --regs > dump.log
+    ./ripes.AppImage --mode cli --src output.asm -t asm --proc "RV32_SS" --isaexts M,C --output log.json --json --runinfo --regs > dump.log
     
     # Call the second Python script (checker.py) and pass the loop counter as an argument
     output=$(python3 checker.py $i)
