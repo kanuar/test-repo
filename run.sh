@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo apt install libxcb-*
+pip install json
 wget -c https://github.com/mortbopet/Ripes/releases/download/v2.2.5/Ripes-v2.2.5-linux-x86_64.AppImage -O ripes.AppImage > dependency.log
 chmod a+x ripes.AppImage
 sudo apt-get install fuse
