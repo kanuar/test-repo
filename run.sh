@@ -1,8 +1,7 @@
 #!/bin/bash
-sudo add-apt-repository universe
-sudo apt install libfuse2t64
 wget -c https://github.com/mortbopet/Ripes/releases/download/v2.2.5/Ripes-v2.2.5-linux-x86_64.AppImage -O ripes.AppImage > dependency.log
 chmod a+x ripes.AppImage
+sudo mount -o loop ripes.AppImage /mnt
 
 # Initialize the pass counter
 pass_counter=0
@@ -17,7 +16,7 @@ do
     python3 converter.py $i > py_dump.log
     
     # Run the Ripes command with the specified options
-    ./ripes.AppImage --mode cli --src output.asm -t asm --proc "RV32_SS" --isaexts M,C --output log.json --json --runinfo --regs > dump.log
+    /mnt/AppRun --mode cli --src output.asm -t asm --proc "RV32_SS" --isaexts M,C --output log.json --json --runinfo --regs > dump.log
     
     # Call the second Python script (checker.py) and pass the loop counter as an argument
     output=$(python3 checker.py $i)
