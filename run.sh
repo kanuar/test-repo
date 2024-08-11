@@ -1,6 +1,7 @@
 #!/bin/bash
-
-wget -c https://github.com/mortbopet/Ripes/releases/download/v2.2.5/Ripes-v2.2.5-linux-x86_64.AppImage -O ripes.AppImage
+sudo add-apt-repository universe
+sudo apt install libfuse2t64
+wget -c https://github.com/mortbopet/Ripes/releases/download/v2.2.5/Ripes-v2.2.5-linux-x86_64.AppImage -O ripes.AppImage > dependency.log
 chmod a+x ripes.AppImage
 
 # Initialize the pass counter
