@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget -c https://github.com/mortbopet/Ripes/releases/download/v2.2.5/Ripes-v2.2.5-linux-x86_64.AppImage --output ripes.AppImage
+wget -c https://github.com/mortbopet/Ripes/releases/download/v2.2.5/Ripes-v2.2.5-linux-x86_64.AppImage -O ripes.AppImage
 chmod a+x ripes.AppImage
 
 # Initialize the pass counter
