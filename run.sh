@@ -1,14 +1,6 @@
 #!/bin/bash
-sudo apt install libxcb-*
-pip install json
 wget -c https://github.com/mortbopet/Ripes/releases/download/v2.2.5/Ripes-v2.2.5-linux-x86_64.AppImage -O ripes.AppImage > dependency.log
 chmod a+x ripes.AppImage
-sudo apt-get install fuse
-sudo modprobe fuse
-sudo groupadd fuse
-
-user="$(whoami)"
-sudo usermod -a -G fuse $user
 
 # Initialize the pass counter
 pass_counter=0
