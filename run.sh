@@ -1,7 +1,8 @@
 #!/bin/bash
-wget -c https://github.com/mortbopet/Ripes/releases/download/v2.2.5/Ripes-v2.2.5-linux-x86_64.AppImage -O ripes.AppImage > dependency.log
+echo "setting up..."
+wget -q -c https://github.com/mortbopet/Ripes/releases/download/v2.2.5/Ripes-v2.2.5-linux-x86_64.AppImage -O ripes.AppImage > dependency.log
 chmod a+x ripes.AppImage
-
+echo "setup complete"
 # Initialize the pass counter
 pass_counter=0
 
@@ -9,7 +10,7 @@ pass_counter=0
 for i in {1..10}
 do
     # show iteration counter
-    echo "Iteration $i"
+    echo "Test Case: $i"
 
     # Call the first Python script (convert.py) and pass the loop counter as an argument
     python3 converter.py $i > py_dump.log
