@@ -16,4 +16,3 @@ test_segment:
         j test_loop
 final:
     mv a7,x5
-    nop
